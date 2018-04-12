@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  asunto: MyString
+  texto: MyText
+  imagen: MyString
+  archivo: MyString
+  padre: one
+  alumno: one
+  gravedad: MyString
+
+two:
+  asunto: MyString
+  texto: MyText
+  imagen: MyString
+  archivo: MyString
+  padre: two
+  alumno: two
+  gravedad: MyString

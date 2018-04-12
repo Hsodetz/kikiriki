@@ -1,0 +1,14 @@
+es:
+  padres:
+    index: 
+      show_link:      'Ver'
+      edit_link:      'Editar'
+      destroy_link:   'Eliminar'
+      new_link_padre: 'Nuevo Padre'
+     
+    show:
+      edit_link:      'Editar'
+      back_link:      'Regresar'
+
+   
+        

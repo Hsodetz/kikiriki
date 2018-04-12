@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Asunto:</strong>
+  <%= @denuncium.asunto %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @denuncium.texto %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @denuncium.imagen %>
+</p>
+
+<p>
+  <strong>Archivo:</strong>
+  <%= @denuncium.archivo %>
+</p>
+
+<p>
+  <strong>Padre:</strong>
+  <%= @denuncium.padre %>
+</p>
+
+<p>
+  <strong>Alumno:</strong>
+  <%= @denuncium.alumno %>
+</p>
+
+<p>
+  <strong>Gravedad:</strong>
+  <%= @denuncium.gravedad %>
+</p>
+
+<%= link_to 'Edit', edit_denuncium_path(@denuncium) %> |
+<%= link_to 'Back', denuncia_path %>

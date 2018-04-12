@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numeroMatricula: 1
+  nombres: MyString
+  apellidos: MyString
+  edad: 1
+  colegio: one
+
+two:
+  numeroMatricula: 1
+  nombres: MyString
+  apellidos: MyString
+  edad: 1
+  colegio: two

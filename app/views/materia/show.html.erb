@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @materium.nombre %>
+</p>
+
+<p>
+  <strong>Colegio:</strong>
+  <%= @materium.colegio.nombre %>
+</p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @materium.horario %>
+</p>
+
+<p>
+  <strong>Profesor:</strong>
+  <%= @materium.profesor.nombres %>
+</p>
+
+<%= link_to 'Edit', edit_materium_path(@materium) %> |
+<%= link_to 'Back', materia_path %>

@@ -1,0 +1,37 @@
+<%= form_for(asistencium) do |f| %>
+  <% if asistencium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(asistencium.errors.count, "error") %> prohibited this asistencium from being saved:</h2>
+
+      <ul>
+      <% asistencium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :materia_id %>
+    <%= f.text_field :materia_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alumno_id %>
+    <%= f.text_field :alumno_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :resultadoAsistencia %>
+    <%= f.text_field :resultadoAsistencia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fechaHora %>
+    <%= f.date_select :fechaHora %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

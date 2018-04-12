@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Autorizacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Alumno</th>
+      <th>Colegio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @autorizacions.each do |autorizacion| %>
+      <tr>
+        <td><%= autorizacion.codigo %></td>
+        <td><%= autorizacion.alumno %></td>
+        <td><%= autorizacion.colegio %></td>
+        <td><%= link_to 'Show', autorizacion %></td>
+        <td><%= link_to 'Edit', edit_autorizacion_path(autorizacion) %></td>
+        <td><%= link_to 'Destroy', autorizacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Autorizacion', new_autorizacion_path %>

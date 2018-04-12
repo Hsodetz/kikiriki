@@ -1,0 +1,32 @@
+<%= form_for(autorizacion) do |f| %>
+  <% if autorizacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(autorizacion.errors.count, "error") %> prohibited this autorizacion from being saved:</h2>
+
+      <ul>
+      <% autorizacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alumno_id %>
+    <%= f.text_field :alumno_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :colegio_id %>
+    <%= f.text_field :colegio_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

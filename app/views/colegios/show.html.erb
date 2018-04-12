@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @colegio.nombre %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @colegio.direccion %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @colegio.pais %>
+</p>
+
+<%= link_to 'Editar', edit_colegio_path(@colegio) %> |
+<%= link_to 'Regresar', colegios_path %>

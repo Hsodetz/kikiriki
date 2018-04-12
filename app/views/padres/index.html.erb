@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="margin-top: 3rem;">Padres</h1>
+
+<table class="table table-sm table-responsive">
+  <thead>
+    <tr>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Pais</th>
+      <th>Correo</th>
+      <th>Clave</th>
+      <th>Telefono</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @padres.each do |padre| %>
+      <tr>
+        <td><%= padre.nombres %></td>
+        <td><%= padre.apellidos %></td>
+        <td><%= padre.pais %></td>
+        <td><%= padre.correo %></td>
+        <td><%= padre.clave %></td>
+        <td><%= padre.telefono %></td>
+        <td><%= link_to t('.show_link'), padre %></td>
+        <td><%= link_to t('.edit_link'), edit_padre_path(padre) %></td>
+        <td><%= link_to t('.destroy_link'), padre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('.new_link_padre'), new_padre_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @autorizacion.codigo %>
+</p>
+
+<p>
+  <strong>Alumno:</strong>
+  <%= @autorizacion.alumno %>
+</p>
+
+<p>
+  <strong>Colegio:</strong>
+  <%= @autorizacion.colegio %>
+</p>
+
+<%= link_to 'Edit', edit_autorizacion_path(@autorizacion) %> |
+<%= link_to 'Back', autorizacions_path %>

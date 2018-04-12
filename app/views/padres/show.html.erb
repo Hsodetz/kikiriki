@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombres:</strong>
+  <%= @padre.nombres %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @padre.apellidos %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @padre.pais %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @padre.correo %>
+</p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @padre.clave %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @padre.telefono %>
+</p>
+
+<%= link_to t('.edit_link'), edit_padre_path(@padre) %> |
+<%= link_to t('.back_link'), padres_path %>
