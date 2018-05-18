@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180228030252) do
 
-  create_table "alumnos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "alumnos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.integer  "numeroMatricula"
     t.string   "nombres"
     t.string   "apellidos"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.index ["colegio_id"], name: "index_alumnos_on_colegio_id", using: :btree
   end
 
-  create_table "asistencia", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "asistencia", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.integer  "materia_id"
     t.integer  "alumno_id"
     t.string   "resultadoAsistencia"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.index ["materia_id"], name: "index_asistencia_on_materia_id", using: :btree
   end
 
-  create_table "autorizacions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "autorizacions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "codigo"
     t.integer  "alumno_id"
     t.integer  "colegio_id"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.index ["colegio_id"], name: "index_autorizacions_on_colegio_id", using: :btree
   end
 
-  create_table "colegios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "colegios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "nombre"
     t.text     "direccion",  limit: 65535
     t.string   "pais"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "denuncia", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "denuncia", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "asunto"
     t.text     "texto",      limit: 65535
     t.string   "imagen"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.index ["padre_id"], name: "index_denuncia_on_padre_id", using: :btree
   end
 
-  create_table "eventos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "eventos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "imagen"
     t.string   "titulo"
     t.text     "detalle",     limit: 65535
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.datetime "updated_at",                null: false
   end
 
-  create_table "materia", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "materia", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "nombre"
     t.integer  "colegio_id"
     t.string   "horario"
@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.index ["profesor_id"], name: "index_materia_on_profesor_id", using: :btree
   end
 
-  create_table "observacions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "observacions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "asunto"
     t.text     "mensajes",    limit: 65535
     t.integer  "profesor_id"
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.index ["profesor_id"], name: "index_observacions_on_profesor_id", using: :btree
   end
 
-  create_table "padres", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "padres", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "nombres"
     t.string   "apellidos"
     t.string   "pais"
@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "profesors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "profesors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "nombres"
     t.string   "apellidos"
     t.string   "telefono"
@@ -118,7 +118,7 @@ ActiveRecord::Schema.define(version: 20180228030252) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
